@@ -1,8 +1,8 @@
 package com.lufax.jersey.dto;
 
-import javax.xml.bind.annotation.XmlRootElement;
+//import javax.xml.bind.annotation.XmlRootElement;
+//import javax.xml.bind.annotation.XmlAttribute;
 
-@XmlRootElement
 public class Person {
 	public Person() {
 
