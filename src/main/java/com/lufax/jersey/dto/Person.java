@@ -3,7 +3,12 @@ package com.lufax.jersey.dto;
 //import javax.xml.bind.annotation.XmlRootElement;
 //import javax.xml.bind.annotation.XmlAttribute;
 
-public class Person {
+public class Person  implements java.io.Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -5594659787535770556L;
+
 	public Person() {
 
 	}

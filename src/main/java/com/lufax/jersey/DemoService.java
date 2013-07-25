@@ -17,15 +17,21 @@ import javax.ws.rs.PathParam;
 
 import com.lufax.jersey.dto.Book;
 import com.lufax.jersey.dto.Person;
+import org.springframework.stereotype.Component;
 
+//@Component
 @Path("/demo")
-public class DemoService {
+public class DemoService implements DemoInterface {
 	
 	private Map<String, Person> repos = new HashMap<String, Person>();
 	private Map<String, Book> books = new HashMap<String, Book>();
 	
 	
 	public DemoService() {
+		System.out.println("Create DemoService "+this);
+//		Exception ex = new Exception("Debug DemoService");
+//		ex.printStackTrace();
+		
 		repos.put("zhangyijun", new Person("zhangyijun", 36));
 		repos.put("wangyoudong", new Person("wangyoudong", 31));
 		repos.put("some", new Person("some", 24));
@@ -39,14 +45,14 @@ public class DemoService {
 	@Path("zhang")
 	// @Consumes(MediaType.APPLICATION_JSON)
 	public Person author() {
-		return get("zhangyijun");
+		return person("zhangyijun");
 	}
 	
 	@GET 
 	@Produces("application/json")
 	@Path("person/{name}")
 	// @Consumes(MediaType.APPLICATION_JSON)
-	public Person get(@PathParam("name") String name) {
+	public Person person(@PathParam("name") String name) {
 		return repos.get(name);
 	}
 

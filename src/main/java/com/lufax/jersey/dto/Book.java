@@ -2,8 +2,16 @@ package com.lufax.jersey.dto;
 
 import java.util.Date;
 
-public class Book {
+public class Book implements java.io.Serializable {
 	
+	
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 4499114169509794596L;
+
+
 	public Book() {
 		
 	}
