@@ -29,6 +29,20 @@ public class Book implements java.io.Serializable {
 	private Date publish;
 	private int pages;
 	
+	private String info;
+	
+
+	public String getInfo() {
+		return info;
+	}
+
+	public void setInfo(String info) {
+		this.info = info;
+	}
+
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
 
 	public Date getPublish() {
 		return publish;

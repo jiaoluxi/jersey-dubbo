@@ -3,7 +3,7 @@ package com.lufax.jersey.dto;
 //import javax.xml.bind.annotation.XmlRootElement;
 //import javax.xml.bind.annotation.XmlAttribute;
 
-public class Person  implements java.io.Serializable {
+public class Person implements java.io.Serializable {
 	/**
 	 * 
 	 */
@@ -21,6 +21,16 @@ public class Person  implements java.io.Serializable {
 
 	private String name;
 	private int age;
+
+	private String info;
+
+	public String getInfo() {
+		return info;
+	}
+
+	public void setInfo(String info) {
+		this.info = info;
+	}
 
 	public String getName() {
 		return name;

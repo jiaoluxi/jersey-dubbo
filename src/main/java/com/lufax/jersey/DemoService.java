@@ -53,7 +53,9 @@ public class DemoService implements DemoInterface {
 	@Path("person/{name}")
 	// @Consumes(MediaType.APPLICATION_JSON)
 	public Person person(@PathParam("name") String name) {
-		return repos.get(name);
+		Person p = repos.get(name);
+		p.setInfo("demo");
+		return p;
 	}
 
 	@GET 
@@ -68,7 +70,9 @@ public class DemoService implements DemoInterface {
 	@Path("book/{name}")
 	// @Consumes(MediaType.APPLICATION_JSON)
 	public Book book(@PathParam("name") String name) {
-		return books.get(name);
+		Book b = books.get(name);
+		b.setInfo("demo");
+		return b;
 	}
 
 	@GET 

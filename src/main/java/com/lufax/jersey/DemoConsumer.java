@@ -15,8 +15,12 @@ import org.springframework.stereotype.Component;
 //@Component
 @Path("/consumer")
 public class DemoConsumer {
+	
+	public DemoConsumer() {
+		System.out.println("Create DemoConsumer "+this);
+	}
 
-	@InjectParam("remoteDemo")
+	//@InjectParam("remoteDemo")
 	private DemoInterface demo;
 
 	public DemoInterface getDemo() {
@@ -24,6 +28,7 @@ public class DemoConsumer {
 	}
 
 	public void setDemo(DemoInterface demo) {
+		System.out.println("Set demo "+demo);
 		this.demo = demo;
 	}
 
@@ -31,14 +36,18 @@ public class DemoConsumer {
 	@Produces("application/json")
 	@Path("person/{name}")
 	public Person person(@PathParam("name") String name) {
-		return demo.person(name);
+		Person p = demo.person(name);
+		p.setInfo(this.demo.toString());
+		return p;
 	}
 
 	@GET 
 	@Produces("application/json")
 	@Path("book/{name}")
 	public Book book(@PathParam("name") String name) {
-		return demo.book(name);
+		Book b = demo.book(name);
+		b.setInfo(this.demo.toString());
+		return b;
 	}
 
 	@GET 

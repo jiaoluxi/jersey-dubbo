@@ -15,9 +15,9 @@
 	<context:annotation-config />
 
 <!-- 
- -->
 	<dubbo:registry address="dubbo://172.17.20.26:33090" />
 	<dubbo:protocol name="dubbo" host="172.17.20.26" port="9191"/>
+ -->
 
 	<bean id="demoService" class="com.lufax.jersey.DemoService" />
 
