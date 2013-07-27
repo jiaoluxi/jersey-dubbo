@@ -8,63 +8,72 @@
 	<name>jersey-dubbo Maven Webapp</name>
 	<url>http://maven.apache.org</url>
 
+	<properties>
+		<spring_version>3.2.3.RELEASE</spring_version>
+		<dubbo_version>2.5.3</dubbo_version>
+		<jersey_version>1.17</jersey_version>
+		<zkclient_version>0.1</zkclient_version>
+		
+		<jetty_port>9190</jetty_port>
+	</properties>
+
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-core</artifactId>
-			<version>3.2.3.RELEASE</version>
+			<version>${spring_version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-beans</artifactId>
-			<version>3.2.3.RELEASE</version>
+			<version>${spring_version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-context</artifactId>
-			<version>3.2.3.RELEASE</version>
+			<version>${spring_version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-web</artifactId>
-			<version>3.2.3.RELEASE</version>
+			<version>${spring_version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-webmvc</artifactId>
-			<version>3.2.3.RELEASE</version>
+			<version>${spring_version}</version>
 		</dependency>
 
 
 		<dependency>
 			<groupId>com.sun.jersey</groupId>
 			<artifactId>jersey-core</artifactId>
-			<version>1.17</version>
+			<version>${jersey_version}</version>
 		</dependency>
 
 
 		<dependency>
 			<groupId>com.sun.jersey</groupId>
 			<artifactId>jersey-server</artifactId>
-			<version>1.17</version>
+			<version>${jersey_version}</version>
 		</dependency>
 
 		<dependency>
 			<groupId>com.sun.jersey</groupId>
 			<artifactId>jersey-client</artifactId>
-			<version>1.17</version>
+			<version>${jersey_version}</version>
 		</dependency>
 
 		<dependency>
 			<groupId>com.sun.jersey</groupId>
 			<artifactId>jersey-json</artifactId>
-			<version>1.17</version>
+			<version>${jersey_version}</version>
 		</dependency>
 
 		<dependency>
 			<groupId>com.sun.jersey.contribs</groupId>
 			<artifactId>jersey-spring</artifactId>
-			<version>1.17</version>
+			<version>${jersey_version}</version>
 			<exclusions>
 				<exclusion>
 					<groupId>org.springframework</groupId>
@@ -97,7 +106,7 @@
 		<dependency>
 			<groupId>com.alibaba</groupId>
 			<artifactId>dubbo</artifactId>
-			<version>2.4.10</version>
+			<version>${dubbo_version}</version>
 			<exclusions>
 				<exclusion>
 					<groupId>org.springframework</groupId>
@@ -109,7 +118,7 @@
 		<dependency>
 			<groupId>com.github.sgroschupf</groupId>
 			<artifactId>zkclient</artifactId>
-			<version>0.1</version>
+			<version>${zkclient_version}</version>
 		</dependency>
 
 		<dependency>
@@ -162,7 +171,7 @@
 				<configuration>
 					<connectors>
 						<connector implementation="org.mortbay.jetty.nio.SelectChannelConnector">
-							<port>9190</port>
+							<port>${jetty_port}</port>
 						</connector>
 					</connectors>
 					<stopPort>9966</stopPort>
