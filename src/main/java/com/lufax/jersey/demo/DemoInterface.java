@@ -1,9 +1,9 @@
-package com.lufax.jersey;
+package com.lufax.jersey.demo;
 
 import java.util.List;
 
-import com.lufax.jersey.dto.Book;
-import com.lufax.jersey.dto.Person;
+import com.lufax.jersey.demo.dto.Book;
+import com.lufax.jersey.demo.dto.Person;
 
 public interface DemoInterface {
 

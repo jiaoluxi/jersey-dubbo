@@ -1,4 +1,4 @@
-package com.lufax.jersey.dto;
+package com.lufax.jersey.demo.dto;
 
 import java.util.Date;
 

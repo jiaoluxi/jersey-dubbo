@@ -19,10 +19,10 @@
 	<dubbo:protocol name="dubbo" host="172.17.20.26" port="9191"/>
  -->
 
-	<bean id="demoService" class="com.lufax.jersey.DemoService" />
+	<bean id="demoService" class="com.lufax.jersey.demo.DemoService" />
 
-	<dubbo:service interface="com.lufax.jersey.DemoInterface" ref="demoService" />
-	<dubbo:reference id="remoteDemo" interface="com.lufax.jersey.DemoInterface" check="false" />
+	<dubbo:service interface="com.lufax.jersey.demo.DemoInterface" ref="demoService" />
+	<dubbo:reference id="remoteDemo" interface="com.lufax.jersey.demo.DemoInterface" check="false" />
 	<!-- 
 	 -->
  
@@ -31,7 +31,7 @@
 
 	<!-- Delegate Raw Service by ref or remote ref 
 	-->
-	<bean id="test2" class="com.lufax.jersey.DemoConsumer">
+	<bean id="test2" class="com.lufax.jersey.demo.DemoConsumer">
 		<property name="demo" ref="remoteDemo" />
 	</bean>
 

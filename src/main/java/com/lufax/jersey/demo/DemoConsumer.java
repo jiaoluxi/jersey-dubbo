@@ -1,4 +1,4 @@
-package com.lufax.jersey;
+package com.lufax.jersey.demo;
 
 import java.util.List;
 
@@ -7,8 +7,8 @@ import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 
-import com.lufax.jersey.dto.Book;
-import com.lufax.jersey.dto.Person;
+import com.lufax.jersey.demo.dto.Book;
+import com.lufax.jersey.demo.dto.Person;
 import com.sun.jersey.api.core.InjectParam;
 import org.springframework.stereotype.Component;
 

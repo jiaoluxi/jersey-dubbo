@@ -1,4 +1,4 @@
-package com.lufax.jersey;
+package com.lufax.jersey.demo;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -15,8 +15,9 @@ import javax.ws.rs.Produces;
 
 import javax.ws.rs.PathParam;
 
-import com.lufax.jersey.dto.Book;
-import com.lufax.jersey.dto.Person;
+import com.lufax.jersey.demo.dto.Book;
+import com.lufax.jersey.demo.dto.Person;
+
 import org.springframework.stereotype.Component;
 
 //@Component
