@@ -18,6 +18,8 @@
 	<dubbo:registry address="dubbo://172.17.20.26:33090" />
 	<dubbo:protocol name="dubbo" host="172.17.20.26" port="9191"/>
  -->
+ 	<dubbo:protocol name="http" port="9190" server="servlet" contextpath="jersey-dubbo" 
+ 		serialization="json" accesslog="/home/zhangyijun/work/dubbo/ac.log" />
 
 	<bean id="demoService" class="com.lufax.jersey.demo.DemoService" />
 
