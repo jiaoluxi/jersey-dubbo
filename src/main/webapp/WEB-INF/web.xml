@@ -46,7 +46,7 @@
 	</servlet>
 	<servlet-mapping>
 	         <servlet-name>dubbo</servlet-name>
-	         <url-pattern>/*</url-pattern>
+	         <url-pattern>/dubbo/*</url-pattern>
 	</servlet-mapping>
 
      
