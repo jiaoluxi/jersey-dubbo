@@ -22,9 +22,20 @@
 	<dubbo:reference id="remoteDemo" interface="com.lufax.jersey.demo.DemoInterface" check="false" />
 	<!-- Delegate Raw Service by ref or remote ref 
 	-->
-	<bean id="test2" class="com.lufax.jersey.demo.DemoConsumer">
+	<bean id="test1" class="com.lufax.jersey.demo.DemoConsumer">
 		<property name="demo" ref="remoteDemo" />
 	</bean>
 
+	<!-- try adapter Service as another Interface -->
+	<bean id="duckService" class="com.lufax.dubbo.DuckService">
+		<property name="service" ref="demoService" />
+		<property name="interfaceName"><value>com.lufax.jersey.demo.DuckInterface</value></property>
+	</bean>
+	<!-- Now expose as new Interface -->
+	<dubbo:service interface="com.lufax.jersey.demo.DuckInterface" ref="duckService" />
+	<dubbo:reference id="remoteDuck" interface="com.lufax.jersey.demo.DuckInterface" check="false" />
 
+	<bean id="test2" class="com.lufax.jersey.demo.DuckConsumer">
+		<property name="demo" ref="remoteDuck" />
+	</bean>
 </beans>

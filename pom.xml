@@ -132,6 +132,14 @@
 			<version>1.1</version>
 		</dependency>
 
+		<dependency>
+		<!-- 
+			<groupId>org.duckapter</groupId>
+		 -->
+			<groupId>com.lufax</groupId>
+			<artifactId>duckapter</artifactId>
+			<version>0.8.0</version>
+		</dependency>
 
 		<dependency>
 			<groupId>junit</groupId>

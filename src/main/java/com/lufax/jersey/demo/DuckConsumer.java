@@ -11,22 +11,21 @@ import com.lufax.jersey.demo.dto.Book;
 import com.lufax.jersey.demo.dto.Person;
 
 @Path("/duck")
-
 public class DuckConsumer {
 	
 	public DuckConsumer() {
-		System.out.println("Create DemoConsumer "+this);
+		System.out.println("Create Duck Consumer "+this);
 	}
 
 	//@InjectParam("remoteDemo")
-	private DemoInterface demo;
+	private DuckInterface demo;
 
-	public DemoInterface getDemo() {
+	public DuckInterface getDemo() {
 		return demo;
 	}
 
-	public void setDemo(DemoInterface demo) {
-		System.out.println("Set demo "+demo);
+	public void setDemo(DuckInterface demo) {
+		System.out.println("Set duck "+demo);
 		this.demo = demo;
 	}
 
@@ -35,7 +34,7 @@ public class DuckConsumer {
 	@Path("person/{name}")
 	public Person person(@PathParam("name") String name) {
 		Person p = demo.person(name);
-		p.setInfo(this.demo.toString());
+		p.setInfo("Duck "+this.demo.toString());
 		return p;
 	}
 
@@ -44,7 +43,7 @@ public class DuckConsumer {
 	@Path("book/{name}")
 	public Book book(@PathParam("name") String name) {
 		Book b = demo.book(name);
-		b.setInfo(this.demo.toString());
+		b.setInfo("Duck "+this.demo.toString());
 		return b;
 	}
 
